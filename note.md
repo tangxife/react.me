@@ -4,7 +4,7 @@
 $ yarn create react-app . --template=typescript
 ```
 
-2. 代码风格控制(VSCode+Eslint+Prettier)
+2. 代码风格控制(VSCode+Eslint+Prettier 没做)
 
    1. Prettier VSCode 插件安装
 
@@ -12,3 +12,4 @@ $ yarn create react-app . --template=typescript
 
    2. 
 
+3. chakra-ui 引入 
