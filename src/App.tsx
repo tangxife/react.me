@@ -1,12 +1,12 @@
-import React from 'react';
-import { Button } from '@chakra-ui/react'
+import React from "react"
+import { Button } from "@chakra-ui/react"
 
 function App() {
   return (
     <div className="App">
-      <Button colorScheme='blue'>Button</Button>
+      <Button colorScheme="blue">Button</Button>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
