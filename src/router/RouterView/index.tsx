@@ -1,15 +1,26 @@
-import React from "react"
-import router, { IRouterType } from "./router"
+import React, { ReactNode } from "react"
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+
+import router from "./router"
+
+interface IRouterType {
+  key: string
+  path: string
+  component: ReactNode
+}
 
 const RouterView: React.FC = () => {
-
-  const generateRoter = (r: IRouterType[]): React.ReactElement => {
-    return 
+  const generateRote = (r: IRouterType[]) => {
+    return r.map((item) => {
+      return <Route key={item.key} path={item.path} element={item.component} />
+    })
   }
 
   return (
     <>
-      <div>RouterView</div>
+      <Router>
+        <Routes>{generateRote(router)}</Routes>
+      </Router>
     </>
   )
 }
