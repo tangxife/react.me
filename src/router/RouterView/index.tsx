@@ -10,6 +10,16 @@ interface PropsType {
 const RouterView: React.FC<PropsType> = (r: PropsType) => {
   const generateRote = (r: PropsType) => {
     return r.routes.map((item) => {
+      if (item.children) {
+        return (
+          <Route key={item.key} path={item.path} element={item.component}>
+            {item.children.map((i) => {
+              return <Route key={i.key} path={i.path} element={i.component} />
+            })}
+          </Route>
+        )
+      }
+
       return <Route key={item.key} path={item.path} element={item.component} />
     })
   }
