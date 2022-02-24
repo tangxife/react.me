@@ -1,10 +1,10 @@
 import { ReactNode } from "react"
 
-import Login from "../../pates/Login"
-import Home from "../../pates/Home"
-import Candidate from "../../pates/Candidate/"
-import Question from "../../pates/Question/"
-import Setting from "../../pates/Setting/index"
+import Login from "../../pages/Login"
+import Home from "../../pages/Home"
+import Candidate from "../../pages/Candidate"
+import Question from "../../pages/Question"
+import Setting from "../../pages/Setting/index"
 
 export interface IRouteType {
   key: string
