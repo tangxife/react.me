@@ -1,7 +1,15 @@
+import { ReactNode } from "react"
+
 import Login from "../../pates/Login"
 import Home from "../../pates/Home"
 
-const router = [
+export interface IRouteType {
+  key: string
+  path: string
+  component: ReactNode
+}
+
+export const routes: IRouteType[] = [
   {
     key: "root",
     path: "/",
@@ -14,9 +22,7 @@ const router = [
   },
   {
     key: "home",
-    path: "/hoem",
+    path: "/home",
     component: <Home />,
   },
 ]
-
-export default router

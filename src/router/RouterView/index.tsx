@@ -1,17 +1,15 @@
-import React, { ReactNode } from "react"
+import React from "react"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 
-import router from "./router"
+import { IRouteType } from "./router"
 
-interface IRouterType {
-  key: string
-  path: string
-  component: ReactNode
+interface PropsType {
+  routes: IRouteType[]
 }
 
-const RouterView: React.FC = () => {
-  const generateRote = (r: IRouterType[]) => {
-    return r.map((item) => {
+const RouterView: React.FC<PropsType> = (r: PropsType) => {
+  const generateRote = (r: PropsType) => {
+    return r.routes.map((item) => {
       return <Route key={item.key} path={item.path} element={item.component} />
     })
   }
@@ -19,7 +17,7 @@ const RouterView: React.FC = () => {
   return (
     <>
       <Router>
-        <Routes>{generateRote(router)}</Routes>
+        <Routes>{generateRote(r)}</Routes>
       </Router>
     </>
   )
